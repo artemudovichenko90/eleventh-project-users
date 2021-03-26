@@ -10,3 +10,13 @@ const users = [
     new Employee('Olga Andreeva', 15, 'female', 'andreeva@gmail.com', 'Ukraine', 500, 'junior', 'design'),
     new Employee('Svetlana Sergeeva', 19, 'female', 'sergeeva@exmaple.com', 'Ukraine', 700, 'junior', 'design')
 ];
+
+//Получить массив только с пользователями (экземпляры класса User, не Employee);
+const onlyUsers = [];
+for (const user of users) {
+    if (user.__proto__ === User.prototype) {
+        onlyUsers.push(user);
+    }
+}
+console.log(onlyUsers);
+console.log(users.filter((item) => item.__proto__ === User.prototype));
