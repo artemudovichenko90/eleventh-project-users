@@ -43,3 +43,15 @@ averageAgeMinors /= countMinor;
 console.log(averageAgeMinors);
 //TODO console.log(users.reduce());
 
+//Получить средний оклад на отдел;
+//TODO
+
+//Получить пользователей у которых почта "gmail.com". +: test@gmail.com, -: test@example.com;
+const usersGmail = [];
+for (const user of users) {
+    if (user.email.includes('gmail.com')) {
+        usersGmail.push(user);
+    }
+}
+console.log(usersGmail);
+console.log(users.filter((item) => item.email.includes('gmail.com')));
