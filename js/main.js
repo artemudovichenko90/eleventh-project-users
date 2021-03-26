@@ -29,3 +29,17 @@ for (const user of users) {
 averageAge /= users.length;
 console.log(averageAge);
 //TODO console.log(users.reduce());
+
+//Получить средний возраст среди несовершеннолетних;
+let averageAgeMinors = 0;
+let countMinor = 0;
+for (const user of users) {
+    if (user.age < 18) {
+        averageAgeMinors += user.age;
+        countMinor++;
+    }
+}
+averageAgeMinors /= countMinor;
+console.log(averageAgeMinors);
+//TODO console.log(users.reduce());
+
