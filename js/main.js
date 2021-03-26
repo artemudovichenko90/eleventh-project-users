@@ -55,3 +55,16 @@ for (const user of users) {
 }
 console.log(usersGmail);
 console.log(users.filter((item) => item.email.includes('gmail.com')));
+
+//Получить электронные почты все совершеннолетних женщин, не старше 30 лет, проживающих в Украине, которые являются сотрудниками.
+const emails = [];
+for (const user of users) {
+    if (user.male === 'female' &&
+        user.age <= 30 &&
+        user.age >= 18 &&
+        user.country === 'Ukraine' &&
+        user instanceof Employee) {
+        emails.push(user.email)
+    }
+}
+console.log(emails);
