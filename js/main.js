@@ -20,3 +20,12 @@ for (const user of users) {
 }
 console.log(onlyUsers);
 console.log(users.filter((item) => item.__proto__ === User.prototype));
+
+//Получить средний возраст;
+let averageAge = 0;
+for (const user of users) {
+    averageAge += user.age;
+}
+averageAge /= users.length;
+console.log(averageAge);
+//TODO console.log(users.reduce());
